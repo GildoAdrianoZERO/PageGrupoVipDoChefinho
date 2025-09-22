@@ -39,7 +39,6 @@ leadForm.addEventListener('submit', function(event) {
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const telefone = document.getElementById('telefone').value;
-    const cep = document.getElementById('cep').value;
     
     // URL da API do Google Apps Script (certifique-se de que está correta)
     const scriptUrl = 'https://script.google.com/macros/s/AKfycby5Qq1OoPB0DS8-mMijBCpANLUcsKcxKPamRvbhVRv6CU5nXgbL4KBP-ORVh397cxVp/exec';
@@ -49,7 +48,6 @@ leadForm.addEventListener('submit', function(event) {
     formData.append('nome', nome);
     formData.append('email', email);
     formData.append('telefone', telefone);
-    formData.append('cep', cep);
     
     // Envia os dados para o Google Apps Script
     fetch(scriptUrl, { method: 'POST', body: formData })
