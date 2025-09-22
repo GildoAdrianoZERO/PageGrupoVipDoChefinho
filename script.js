@@ -41,7 +41,7 @@ leadForm.addEventListener('submit', function(event) {
     const telefone = document.getElementById('telefone').value;
     
     // URL da API do Google Apps Script (certifique-se de que está correta)
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycby5Qq1OoPB0DS8-mMijBCpANLUcsKcxKPamRvbhVRv6CU5nXgbL4KBP-ORVh397cxVp/exec';
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbww_OvOnKqq-SnOvCQJNcaBlpGkz5UPHz9kx2Wz3xc/dev';
     
     // Monta o objeto FormData para enviar os dados
     const formData = new FormData();
