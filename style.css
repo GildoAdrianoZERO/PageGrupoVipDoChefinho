@@ -25,6 +25,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    padding-top: 0px;
 }
 
 /* Seção de Conteúdo Principal (Topo) */
@@ -58,7 +59,8 @@ h1 {
     color: var(--cor-cinza);
     font-weight: 400;
     /* AJUSTE AQUI */
-    margin-bottom: 20px; /* Valor original era 30px. Reduzido para aproximar do botão. */
+    padding-top: 20px;
+    margin-bottom: 0px; 
 }
 
 /* Botão CTA Principal */
@@ -87,7 +89,7 @@ h1 {
 /* Seção de Vídeos (Meio) */
 .video-section {
     /* AJUSTE AQUI */
-    padding: 30px 20px; /* Valor original era 60px. Reduzido para aproximar do botão. */
+    padding:  20px; 
     background-color: var(--cor-fundo-principal);
 }
 
