@@ -5,6 +5,8 @@
     --cor-texto-claro: #E0E0E0;
     --cor-texto-escuro: #0A0A0A;
     --cor-cinza: #B0B0B0;
+    --cor-verde-destaque: #4CAF50;    /* Um tom de verde */
+    --cor-verde-claro: #81C784;       /* Um tom de verde mais claro */
 }
 
 * {
@@ -30,8 +32,9 @@ body {
 
 /* Seção de Conteúdo Principal (Topo) */
 .main-content-section {
-    padding: 60px 20px 40px; /* Mantém o espaçamento superior e lateral */
+    padding: 60px 20px 40px;
 }
+
 
 .tag-line {
     background-color: var(--cor-amarelo-destaque);
@@ -44,21 +47,49 @@ body {
     margin-bottom: 15px;
 }
 
+/* Ajuste para alinhar e aumentar a logo na tag-line */
+.tag-line {
+    background-color: var(--cor-amarelo-destaque);
+    color: var(--cor-texto-escuro);
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-flex; /* Usa flexbox para alinhamento */
+    align-items: center;  /* Alinha os itens verticalmente */
+    gap: 8px;             /* Adiciona espaço entre a logo e o texto */
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tag-logo {
+    background-color: transparent !important;
+    height: 40px; /* AUMENTA A ALTURA DA LOGO */
+    width: auto;  /* Mantém a proporção */
+}
+
+/* Para garantir a responsividade em telas menores */
+@media (max-width: 480px) {
+    .tag-logo {
+        height: 25px; /* Diminui a altura da logo para celulares */
+    }
+}
+
+
+
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5em;
+    font-size: 2em;
     font-weight: 900;
     color: var(--cor-texto-claro);
     text-transform: uppercase;
     line-height: 1.1;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 .sub-headline {
     font-size: 1.5em;
     color: var(--cor-cinza);
     font-weight: 400;
-    /* AJUSTE AQUI */
     padding-top: 20px;
     margin-bottom: 0px; 
 }
@@ -66,7 +97,7 @@ h1 {
 /* Botão CTA Principal */
 .cta-button {
     display: inline-block;
-    background: linear-gradient(90deg, var(--cor-amarelo-destaque) 0%, var(--cor-amarelo-claro) 100%);
+    background: linear-gradient(90deg, var(--cor-verde-destaque) 0%, var(--cor-verde-claro) 100%);
     color: var(--cor-texto-escuro);
     padding: 20px 45px;
     margin-bottom: 30px;
@@ -75,21 +106,20 @@ h1 {
     text-decoration: none;
     border-radius: 50px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5);
     border: none;
     cursor: pointer;
-    animation: pulse-light 2s infinite ease-in-out;
+    animation: pulse-green 2s infinite ease-in-out;
 }
 
 .cta-button:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.7);
+    box-shadow: 0 12px 30px rgba(76, 175, 80, 0.7);
 }
 
 /* Seção de Vídeos (Meio) */
 .video-section {
-    /* AJUSTE AQUI */
-    padding:  20px; 
+    padding: 20px; 
     background-color: var(--cor-fundo-principal);
 }
 
@@ -103,7 +133,7 @@ h1 {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -136,7 +166,7 @@ h1 {
     
 .support-button {
     display: inline-block;
-    background: linear-gradient(90deg, #32CD32 0%, #008000 100%); /* Gradiente verde */
+    background: linear-gradient(90deg, #32CD32 0%, #008000 100%);
     color: var(--cor-texto-claro);
     padding: 18px 45px;
     font-size: 1.6em;
@@ -151,41 +181,22 @@ h1 {
     margin-bottom: 40px;
 }
 
-.support-button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(50, 205, 50, 0.6);
-}
-
 .support-button i {
     margin-right: 10px;
 }
 
-/* Rodapé de Informações */
-.footer {
-    padding: 40px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.85em;
-    color: var(--cor-cinza);
-}
-
-.footer p, .footer a {
-    color: var(--cor-cinza);
-    text-decoration: none;
-    margin: 5px 0;
-    display: block;
-}
 
 /* Animações */
+@keyframes pulse-green {
+    0% { transform: scale(1); box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5); }
+    50% { transform: scale(1.03); box-shadow: 0 12px 30px rgba(76, 175, 80, 0.7); }
+    100% { transform: scale(1); box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5); }
+}
+
 @keyframes pulse-light {
     0% { transform: scale(1); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5); }
     50% { transform: scale(1.03); box-shadow: 0 12px 30px rgba(255, 215, 0, 0.7); }
     100% { transform: scale(1); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5); }
-}
-
-@keyframes pulse-green {
-    0% { transform: scale(1); box-shadow: 0 8px 25px rgba(50, 205, 50, 0.4); }
-    50% { transform: scale(1.03); box-shadow: 0 12px 30px rgba(50, 205, 50, 0.6); }
-    100% { transform: scale(1); box-shadow: 0 8px 25px rgba(50, 205, 50, 0.4); }
 }
 
 /* Responsividade */
@@ -193,7 +204,6 @@ h1 {
     h1 { font-size: 2.5em; }
     .sub-headline { font-size: 1.2em; }
     .cta-button, .support-button { font-size: 1.3em; padding: 15px 30px; }
-    /* AJUSTE AQUI - Mobile */
     .video-section { padding: 20px 20px; }
 }
 
@@ -201,13 +211,12 @@ h1 {
     h1 { font-size: 2em; }
     .sub-headline { font-size: 1em; }
     .cta-button, .support-button { font-size: 1.1em; padding: 12px 25px; }
-    /* AJUSTE AQUI - Mobile */
     .video-section { padding: 10px 20px; }
 }
 
 /* Estilo do Popup */
 .popup-container {
-    display: none; /* Inicia escondido */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -262,7 +271,7 @@ h1 {
 }
 
 .submit-button {
-    background-color: var(--cor-amarelo-destaque);
+    background-color: var(--cor-verde-destaque);
     color: var(--cor-texto-escuro);
     border: none;
     padding: 15px 30px;
@@ -275,4 +284,91 @@ h1 {
 
 .submit-button:hover {
     transform: translateY(-2px);
+}
+
+.disclaimer{
+    color: red;
+}
+
+.aviso-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ocupa toda a tela */
+    max-height: 200px;
+    margin-bottom: 10px;
+}
+
+.aviso-container {
+    background-color: #1a0f0f;
+    border: 2px solid #ff4d4d;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 450px;
+    text-align: center;
+    color: #fff;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    /* Adicionando padding horizontal para telas menores */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.aviso-container .icone {
+    font-size: 18px;
+    margin-right: 6px;
+    color: yellow;
+}
+
+.aviso-container .destaque-vermelho {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.aviso-container .destaque-amarelo {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.aviso-container .grande {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    .aviso-container {
+        /* Permite que o container ocupe quase toda a largura */
+        width: 90%; 
+        /* Ajusta o padding para ter menos espaço nas laterais */
+        padding: 15px;
+    }
+
+    .aviso-container p, 
+    .aviso-container span {
+        /* Diminui o tamanho da fonte para que caiba na tela */
+        font-size: 14px; 
+    }
+
+    .aviso-container .icone {
+        /* Garante que o ícone não fique muito grande */
+        font-size: 16px; 
+    }
+
+    .aviso-container .grande {
+        /* Diminui a fonte do texto "grande" para celular */
+        font-size: 16px;
+    }
+}
+
+/* Telas de 481px até 768px (celulares maiores e tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .aviso-container {
+        /* Aumenta a largura em telas maiores */
+        width: 70%;
+        padding: 20px;
+    }
 }
