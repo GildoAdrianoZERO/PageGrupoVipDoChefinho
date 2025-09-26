@@ -62,7 +62,6 @@ body {
 }
 
 .tag-logo {
-    background-color: transparent !important;
     height: 40px; /* AUMENTA A ALTURA DA LOGO */
     width: auto;  /* Mantém a proporção */
 }
@@ -98,7 +97,7 @@ h1 {
 .cta-button {
     display: inline-block;
     background: linear-gradient(90deg, var(--cor-verde-destaque) 0%, var(--cor-verde-claro) 100%);
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-claro);
     padding: 20px 45px;
     margin-bottom: 30px;
     font-size: 1.6em;
@@ -110,6 +109,7 @@ h1 {
     border: none;
     cursor: pointer;
     animation: pulse-green 2s infinite ease-in-out;
+    
 }
 
 .cta-button:hover {
@@ -272,7 +272,7 @@ h1 {
 
 .submit-button {
     background-color: var(--cor-verde-destaque);
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-claro);
     border: none;
     padding: 15px 30px;
     border-radius: 50px;
