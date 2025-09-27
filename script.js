@@ -74,6 +74,6 @@ leadForm.addEventListener('submit', function(event) {
     // Redireciona o usuário sem esperar a resposta do servidor
     // Usamos um pequeno delay para garantir que o fetch seja iniciado
     setTimeout(() => {
-        window.location.href = 'https://chat.whatsapp.com/B8zrIsGTekgKVj8pYBLuHv?mode=ems_copy_t';
+        window.location.href = 'https://chat.whatsapp.com/BT6U8XT9gSa2lB20PihDNg';
     }, 50); // 50 milissegundos é um tempo imperceptível para o usuário
 });
